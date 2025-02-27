@@ -15,7 +15,7 @@ app.use(
   cors({
     origin:
       process.env.FRONTEND_URL ||
-      "http://localhost:3000/publisher-portfolio2025",
+      "http://localhost:3000/publisher-portfolio2025/api/images",
   })
 );
 
