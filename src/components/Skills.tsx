@@ -5,16 +5,22 @@ import MarqueeImg from "./MarqueeImg";
 import { useEffect, useState } from "react";
 
 function Skills() {
+  const serverUrl = process.env.REACT_APP_API_URL;
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3002/api/images") // 서버에서 이미지 목록을 가져옴
+    if (!serverUrl) {
+      console.error("서버 URL이 설정되지 않았습니다.");
+      return;
+    }
+
+    fetch(`${serverUrl}/api/images`)
       .then((response) => response.json())
       .then((data) => setImages(data))
       .catch((error) => console.error("이미지 목록 불러오기 실패:", error));
-  }, []);
+  }, [serverUrl]);
 
-  console.log(images);
+  // console.log(serverUrl, images);
 
   return (
     <SkillsWrapper>
@@ -25,16 +31,10 @@ function Skills() {
         <li>
           <MarqueeWrapper>
             {images.map((image, index) => (
-              <MarqueeImg
-                key={index}
-                src={`http://localhost:3002/images/${image}`}
-              />
+              <MarqueeImg key={index} src={`${serverUrl}/images/${image}`} />
             ))}
             {images.map((image, index) => (
-              <MarqueeImg
-                key={index}
-                src={`http://localhost:3002/images/${image}`}
-              />
+              <MarqueeImg key={index} src={`${serverUrl}/images/${image}`} />
             ))}
           </MarqueeWrapper>
         </li>

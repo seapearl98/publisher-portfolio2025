@@ -2,13 +2,24 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import fs from "fs";
 import path from "path";
+import dotenv from "dotenv";
+
+// .env 파일 로드
+dotenv.config();
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 const imagesDirectory = path.join(__dirname, "../src/assets/marquee"); // 이미지 폴더 경로
 
-app.use(cors({ origin: "http://localhost:3001" }));
+app.use(
+  cors({
+    origin:
+      process.env.FRONTEND_URL ||
+      "http://localhost:3000/publisher-portfolio2025",
+  })
+);
 
+// 정적 파일 서비스 (이미지 파일 경로에 접근하도록 설정)
 app.use("/images", express.static(imagesDirectory));
 
 // 이미지 목록을 반환하는 API
