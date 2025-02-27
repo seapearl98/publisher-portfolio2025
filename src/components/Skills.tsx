@@ -20,7 +20,7 @@ function Skills() {
       .catch((error) => console.error("이미지 목록 불러오기 실패:", error));
   }, [serverUrl]);
 
-  // console.log(serverUrl, images);
+  console.log(serverUrl, images);
 
   return (
     <SkillsWrapper>
