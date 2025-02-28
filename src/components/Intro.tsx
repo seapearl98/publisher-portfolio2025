@@ -56,6 +56,7 @@ const IntroWrapper = styled.div`
 `;
 const ProfileCircle = styled.div`
   width: 400px;
+  height: 400px;
   margin: 0 auto;
   border-radius: 50%;
   background: linear-gradient(-30deg, #ff8660 0%, #8000ff 99%);
