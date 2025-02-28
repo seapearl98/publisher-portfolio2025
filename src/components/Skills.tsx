@@ -2,25 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
 import MarqueeImg from "./MarqueeImg";
-import { useEffect, useState } from "react";
 
 function Skills() {
-  const serverUrl = process.env.REACT_APP_API_URL;
-  const [images, setImages] = useState<string[]>([]);
+  const images = require.context(
+    "../assets/marquee",
+    false,
+    /\.(png|jpe?g|svg)$/
+  );
 
-  useEffect(() => {
-    if (!serverUrl) {
-      console.error("서버 URL이 설정되지 않았습니다.");
-      return;
-    }
-
-    fetch(`${serverUrl}/api/images`)
-      .then((response) => response.json())
-      .then((data) => setImages(data))
-      .catch((error) => console.error("이미지 목록 불러오기 실패:", error));
-  }, [serverUrl]);
-
-  console.log(serverUrl, images);
+  const imageList: string[] = Array.from({ length: 9 }, (_, i) =>
+    images(`./logo${i + 1}.png`)
+  );
 
   return (
     <SkillsWrapper>
@@ -30,11 +22,8 @@ function Skills() {
       <SkillsUl>
         <li>
           <MarqueeWrapper>
-            {images.map((image, index) => (
-              <MarqueeImg key={index} src={`${serverUrl}/images/${image}`} />
-            ))}
-            {images.map((image, index) => (
-              <MarqueeImg key={index} src={`${serverUrl}/images/${image}`} />
+            {imageList.map((src, index) => (
+              <MarqueeImg key={index} src={src} />
             ))}
           </MarqueeWrapper>
         </li>
