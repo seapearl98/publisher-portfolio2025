@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/publisher-portfolio2025/static/css/main.86556a71.css",
-    "main.js": "/publisher-portfolio2025/static/js/main.f12dd97b.js",
+    "main.css": "/publisher-portfolio2025/static/css/main.68d93f1c.css",
+    "main.js": "/publisher-portfolio2025/static/js/main.4293ffd1.js",
     "static/js/453.0367e654.chunk.js": "/publisher-portfolio2025/static/js/453.0367e654.chunk.js",
+    "static/media/work1.png": "/publisher-portfolio2025/static/media/work1.933a0b7038355ae4b7b0.png",
     "static/media/bi.svg": "/publisher-portfolio2025/static/media/bi.dc5ef6540bc7308ba3428a45bd6cc003.svg",
+    "static/media/logo11.png": "/publisher-portfolio2025/static/media/logo11.70cde9820f84edb7c3f1.png",
+    "static/media/logo10.png": "/publisher-portfolio2025/static/media/logo10.0e23713b42630280e08d.png",
     "static/media/logo8.png": "/publisher-portfolio2025/static/media/logo8.6ad643b1b685bc1fba25.png",
+    "static/media/logo14.png": "/publisher-portfolio2025/static/media/logo14.749631afca381efad2bb.png",
     "static/media/profile.webp": "/publisher-portfolio2025/static/media/profile.0184b164e3d41d316932.webp",
     "static/media/logo6.png": "/publisher-portfolio2025/static/media/logo6.02b568f351b93508ac2e.png",
     "static/media/logo9.png": "/publisher-portfolio2025/static/media/logo9.41fd50323a12a031299a.png",
@@ -14,13 +18,14 @@
     "static/media/logo1.png": "/publisher-portfolio2025/static/media/logo1.f78eade56b519cf5f62e.png",
     "static/media/logo4.png": "/publisher-portfolio2025/static/media/logo4.d9bbaa8320f35ca136d5.png",
     "static/media/logo3.png": "/publisher-portfolio2025/static/media/logo3.761e14bc91ca2953b97a.png",
+    "static/media/logo13.png": "/publisher-portfolio2025/static/media/logo13.3ff92c03c1cb0dd30442.png",
     "index.html": "/publisher-portfolio2025/index.html",
-    "main.86556a71.css.map": "/publisher-portfolio2025/static/css/main.86556a71.css.map",
-    "main.f12dd97b.js.map": "/publisher-portfolio2025/static/js/main.f12dd97b.js.map",
+    "main.68d93f1c.css.map": "/publisher-portfolio2025/static/css/main.68d93f1c.css.map",
+    "main.4293ffd1.js.map": "/publisher-portfolio2025/static/js/main.4293ffd1.js.map",
     "453.0367e654.chunk.js.map": "/publisher-portfolio2025/static/js/453.0367e654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86556a71.css",
-    "static/js/main.f12dd97b.js"
+    "static/css/main.68d93f1c.css",
+    "static/js/main.4293ffd1.js"
   ]
 }
