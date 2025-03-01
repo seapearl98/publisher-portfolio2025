@@ -28,7 +28,8 @@ function Experience() {
 }
 
 const ExperienceWrapper = styled.div`
-  max-width: 75%;
+  width: 75%;
+  max-width: 1200px;
   margin: 200px auto 0;
   color: #ccc;
   h3 {

@@ -10,8 +10,12 @@ function Skills() {
     /\.(png|jpe?g|svg)$/
   );
 
-  const imageList: string[] = Array.from({ length: 9 }, (_, i) =>
+  const imageList01: string[] = Array.from({ length: 9 }, (_, i) =>
     images(`./logo${i + 1}.png`)
+  );
+
+  const imageList02: string[] = Array.from({ length: 5 }, (_, i) =>
+    images(`./logo${i + 10}.png`)
   );
 
   return (
@@ -22,28 +26,39 @@ function Skills() {
       <SkillsUl>
         <li>
           <MarqueeWrapper>
-            {imageList.map((src, index) => (
+            {imageList01.map((src, index) => (
+              <MarqueeImg key={index} src={src} />
+            ))}
+            {imageList01.map((src, index) => (
               <MarqueeImg key={index} src={src} />
             ))}
           </MarqueeWrapper>
         </li>
-        {/* <li>
-          <p>
-            이젠아카데미컴퓨터학원에서 <br />
-            <em>UI/UX 웹&앱 디자인 & 프론트엔드(React.js)과정</em>을 수료했어요.
-          </p>
-          <span>(2022.07 - 2022.12)</span>
-        </li> */}
       </SkillsUl>
+      <h3>
+        <i>🪛</i> 이러한 기술을 사용해 봤어요
+      </h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          marginTop: "50px",
+        }}
+      >
+        {imageList02.map((src, index) => (
+          <MarqueeImg key={index} src={src} />
+        ))}
+      </div>
     </SkillsWrapper>
   );
 }
 
 const SkillsWrapper = styled.div`
   width: 75%;
-  max-width: 1000px;
+  max-width: 1200px;
 
-  margin: 200px auto 0;
+  margin: 400px auto 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -61,6 +76,7 @@ const SkillsUl = styled.ul`
   width: 100%;
   height: 80px;
   margin-top: 50px;
+  margin-bottom: 500px;
 
   li {
     position: relative;
