@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectList from "./ProjectList";
-import { images } from "./assets";
 
 function Projects() {
   // const imageNames = ["work1.png", "work2.png", "work3.png"];
