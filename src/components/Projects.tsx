@@ -3,30 +3,6 @@ import styled from "styled-components";
 import ProjectList from "./ProjectList";
 
 function Projects() {
-  // const imageNames = ["work1.png", "work2.png", "work3.png"];
-
-  // const projectItems = imageNames.map((name) => ({
-  //   imgSrc: require(`../assets/images/${name}`),
-  //   title: name.split(".")[0], // 파일명에서 확장자 제거
-  //   link: `https://example.com/${name.split(".")[0]}`,
-  //   buttonImg: require("../assets/images/viewBtn.webp"),
-  // }));
-
-  // <li>
-  //         <div>
-  //           <img src={work1} alt="피자스톰 홈페이지 이미지" />
-  //           <p>see the page</p>
-  //           <p>피자스톰</p>
-  //           <a
-  //             href="https://pizzastorm.co.kr/"
-  //             target="_blank"
-  //             rel="noreferrer"
-  //           >
-  //             <img src={viewBtn} alt="" />
-  //           </a>
-  //         </div>
-  //       </li>
-
   const projectLists = [
     {
       title: "피자스톰",
@@ -79,20 +55,6 @@ function Projects() {
         {projectLists.map((list, index) => (
           <ProjectList key={index} list={list} />
         ))}
-        {/* <li>
-          <div>
-            <img src={work1} alt="피자스톰 홈페이지 이미지" />
-            <p>see the page</p>
-            <p>피자스톰</p>
-            <a
-              href="https://pizzastorm.co.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={viewBtn} alt="" />
-            </a>
-          </div>
-        </li> */}
       </ul>
     </ProjectsWrapper>
   );
@@ -114,20 +76,6 @@ const ProjectsWrapper = styled.div`
     #5900b83e 98%,
     rgba(22, 21, 19, 1) 100%
   );
-
-  /* &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 400px;
-    background: linear-gradient(
-      to bottom,
-      rgba(22, 21, 19, 1) 0%,
-      #8000ff 100%
-    );
-  } */
 
   &::after {
     content: "";
