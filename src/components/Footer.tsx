@@ -25,19 +25,31 @@ const FooterWrapper = styled.footer`
   p:nth-of-type(1) {
     font-size: 44px;
     color: #e3e3e3;
+    line-height: 1.2;
   }
 
   p:nth-of-type(2) {
     margin-top: 20px;
     font-size: 32px;
+    line-height: 1.5;
   }
 
   address {
     display: flex;
     align-items: center;
     font-size: 24px;
+    white-space: nowrap;
     i {
       font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    address {
+      margin-top: 35px;
     }
   }
 `;
