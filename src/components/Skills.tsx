@@ -76,7 +76,7 @@ const SkillsUl = styled.ul`
   width: 100%;
   height: 80px;
   margin-top: 50px;
-  margin-bottom: 500px;
+  margin-bottom: 400px;
 
   li {
     position: relative;

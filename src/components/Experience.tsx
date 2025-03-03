@@ -30,7 +30,7 @@ function Experience() {
 const ExperienceWrapper = styled.div`
   width: 75%;
   max-width: 1200px;
-  margin: 200px auto 0;
+  margin: 400px auto 0;
   color: #ccc;
   h3 {
     font-size: 32px;

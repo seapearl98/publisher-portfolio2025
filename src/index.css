@@ -32,6 +32,8 @@ body {
   list-style: none;
   font-style: normal;
   font-family: "Pretendard";
+  word-break: keep-all;
+  text-decoration: none;
 }
 
 code {

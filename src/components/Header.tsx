@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bi from "../assets/images/bi.svg";
+import React from "react";
 
 function Header() {
   return (
