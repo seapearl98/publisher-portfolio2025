@@ -9,15 +9,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    // "module": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["webpack-env"],
-    "outDir": "./dist"
+    "types": ["webpack-env"]
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src"]
 }
