@@ -1,21 +1,59 @@
 import styled from "styled-components";
 import bi from "../assets/images/bi.svg";
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
 
-function Header() {
+interface HeaderProps {
+  goToSection: (sectionRef: React.RefObject<HTMLElement | null>) => void;
+  introRef: React.RefObject<HTMLElement | null>;
+  experienceRef: React.RefObject<HTMLElement | null>;
+  skillsRef: React.RefObject<HTMLElement | null>;
+  projectsRef: React.RefObject<HTMLElement | null>;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  goToSection,
+  introRef,
+  experienceRef,
+  skillsRef,
+  projectsRef,
+}) => {
   return (
     <HeaderWrapper>
       <HeaderImg src={bi} alt="" />
       <HeaderUl>
-        <li>Intro</li>
-        <li>Skills</li>
-        <li>Projects</li>
+        <li
+          onClick={() => {
+            goToSection(introRef);
+          }}
+        >
+          Intro
+        </li>
+        <li
+          onClick={() => {
+            goToSection(skillsRef);
+          }}
+        >
+          Skills
+        </li>
+        <li
+          onClick={() => {
+            goToSection(projectsRef);
+          }}
+        >
+          Projects
+        </li>
       </HeaderUl>
     </HeaderWrapper>
   );
-}
+};
 
 const HeaderWrapper = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,12 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import profile from "../assets/images/profile.webp";
 import styled from "styled-components";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
-function Intro() {
+const Intro = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const upRef = useRef(null);
   const upRef01 = useRef(null);
   const upRef02 = useRef(null);
@@ -37,7 +34,7 @@ function Intro() {
   }, []);
 
   return (
-    <IntroWrapper>
+    <IntroWrapper ref={ref}>
       <ProfileCircle ref={upRef}>
         <img src={profile} alt="" />
       </ProfileCircle>
@@ -55,7 +52,7 @@ function Intro() {
       </p>
     </IntroWrapper>
   );
-}
+});
 
 const IntroWrapper = styled.div`
   padding-top: 140px;

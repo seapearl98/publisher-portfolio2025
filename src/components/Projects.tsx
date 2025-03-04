@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import ProjectList from "./ProjectList";
 
-function Projects() {
+const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const projectLists = [
     {
       title: "피자스톰",
@@ -47,7 +47,7 @@ function Projects() {
   ];
 
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper ref={ref}>
       <h3>
         <i>💻</i> 작업한 프로젝트
       </h3>
@@ -58,12 +58,12 @@ function Projects() {
       </ul>
     </ProjectsWrapper>
   );
-}
+});
 
 const ProjectsWrapper = styled.div`
   position: relative;
-  margin-top: 200px;
-  padding-top: 400px;
+  margin-top: 150px;
+  padding-top: 100px;
   padding-bottom: 200px;
   background: linear-gradient(
     to top,
@@ -83,15 +83,15 @@ const ProjectsWrapper = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    height: 300px;
+    height: 200px;
     background: linear-gradient(
       to bottom,
       rgba(22, 21, 19, 1) 0%,
       rgba(22, 21, 19, 0) 100%
     );
-    opacity: 0.5;
   }
   h3 {
+    padding-top: 100px;
     font-size: 44px;
     color: #fff;
     text-align: center;

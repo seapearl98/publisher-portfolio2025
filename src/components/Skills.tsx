@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
 import MarqueeImg from "./MarqueeImg";
 
-function Skills() {
+const Skills = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const images = require.context(
     "../assets/marquee",
     false,
@@ -19,7 +19,7 @@ function Skills() {
   );
 
   return (
-    <SkillsWrapper>
+    <SkillsWrapper ref={ref}>
       <h3>
         <i>🛠️</i> 이러한 기술을 사용할 줄 알아요
       </h3>
@@ -52,7 +52,7 @@ function Skills() {
       </div>
     </SkillsWrapper>
   );
-}
+});
 
 const SkillsWrapper = styled.div`
   width: 75%;
