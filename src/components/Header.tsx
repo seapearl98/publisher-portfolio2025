@@ -61,6 +61,12 @@ const HeaderWrapper = styled.div`
   box-sizing: border-box;
   background-color: #222;
   color: #fff;
+
+  @media screen and (max-width: 500px) {
+    /* font-size: 14px; */
+    gap: 20px;
+    padding: 15px 15px;
+  }
 `;
 
 const HeaderImg = styled.img`
@@ -75,6 +81,11 @@ const HeaderUl = styled.ul`
   font-size: 20px;
   li {
     list-style: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    /* font-size: 14px; */
+    gap: 15px;
   }
 `;
 

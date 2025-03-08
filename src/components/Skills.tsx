@@ -70,21 +70,20 @@ const Skills = forwardRef<HTMLDivElement, {}>((props, ref) => {
         <i>🛠️</i> 이러한 기술을 사용할 줄 알아요
       </h3>
       <SkillsUl ref={bounceRef02}>
-        <li>
-          <MarqueeWrapper>
-            {imageList01.map((src, index) => (
-              <MarqueeImg key={index} src={src} />
-            ))}
-            {imageList01.map((src, index) => (
-              <MarqueeImg key={index} src={src} />
-            ))}
-          </MarqueeWrapper>
-        </li>
+        <MarqueeWrapper>
+          {imageList01.map((src, index) => (
+            <MarqueeImg key={index} src={src} />
+          ))}
+          {imageList01.map((src, index) => (
+            <MarqueeImg key={index} src={src} />
+          ))}
+        </MarqueeWrapper>
       </SkillsUl>
       <h3 ref={bounceRef03}>
         <i>🪛</i> 이러한 기술을 사용해 봤어요
       </h3>
-      <div
+      <SkillsUl
+        className="second__skill__ul"
         ref={bounceRef04}
         style={{
           display: "flex",
@@ -94,9 +93,11 @@ const Skills = forwardRef<HTMLDivElement, {}>((props, ref) => {
         }}
       >
         {imageList02.map((src, index) => (
-          <MarqueeImg key={index} src={src} />
+          <li>
+            <MarqueeImg key={index} src={src} />
+          </li>
         ))}
-      </div>
+      </SkillsUl>
     </SkillsWrapper>
   );
 });
@@ -127,48 +128,67 @@ const SkillsWrapper = styled.div`
 `;
 
 const SkillsUl = styled.ul`
+  position: relative;
   width: 100%;
   height: 80px;
   margin-top: 50px;
   margin-bottom: 400px;
+  gap: 10px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: linear-gradient(
+      to right,
+      rgba(22, 21, 19, 1) 0%,
+      rgba(22, 21, 19, 0) 100%
+    );
+    left: 0;
+    z-index: 2;
+  }
+
+  &::after {
+    background: linear-gradient(
+      to left,
+      rgba(22, 21, 19, 1) 0%,
+      rgba(22, 21, 19, 0) 100%
+    );
+    right: 0;
+    z-index: 1;
+  }
+
+  &.second__skill__ul {
+    display: flex;
+  }
+
+  &.second__skill__ul::before,
+  &.second__skill__ul::after {
+    display: none;
+  }
 
   li {
     position: relative;
-    width: 100%;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 30%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    &::before {
-      background: linear-gradient(
-        to right,
-        rgba(22, 21, 19, 1) 0%,
-        rgba(22, 21, 19, 0) 100%
-      );
-      left: 0;
-      z-index: 2;
-    }
-
-    &::after {
-      background: linear-gradient(
-        to left,
-        rgba(22, 21, 19, 1) 0%,
-        rgba(22, 21, 19, 0) 100%
-      );
-      right: 0;
-      z-index: 1;
+    width: 5em;
+    aspect-ratio: 1/1;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
     }
   }
 
   @media screen and (max-width: 956px) {
     font-size: 13px;
     text-align: center;
+  }
+  @media screen and (max-width: 500px) {
   }
 `;
 

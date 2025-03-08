@@ -1,7 +1,11 @@
 import React from "react";
 
 function MarqueeImg({ src }) {
-  return <img style={{ height: "5em", margin: "0 10px" }} src={src} alt="" />;
+  return (
+    <li>
+      <img src={src} alt="" />
+    </li>
+  );
 }
 
 export default MarqueeImg;

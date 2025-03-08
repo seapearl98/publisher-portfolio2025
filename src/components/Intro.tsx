@@ -58,6 +58,8 @@ const IntroWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 70px;
+  box-sizing: border-box;
   h2,
   p {
     text-align: center;
@@ -73,7 +75,7 @@ const IntroWrapper = styled.div`
   p {
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 61px;
+    margin-top: 3.8125em;
     color: #797979;
     font-size: 1.25em;
     line-height: 1.75;
@@ -97,6 +99,12 @@ const ProfileCircle = styled.div`
   background: linear-gradient(-30deg, #ff8660 0%, #8000ff 99%);
   img {
     width: 100%;
+  }
+
+  @media screen and (max-width: 956px) {
+    font-size: 13px;
+    width: 18em;
+    height: 18em;
   }
 `;
 

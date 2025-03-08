@@ -98,7 +98,7 @@ const ProjectsWrapper = styled.div`
   > ul {
     width: 85%;
     max-width: 1000px;
-    margin: 150px auto 0;
+    margin: 9.375em auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -107,13 +107,12 @@ const ProjectsWrapper = styled.div`
 
   @media screen and (max-width: 956px) {
     ul {
-      width: 100%;
       flex-direction: column;
       align-items: center;
       font-size: 13px;
 
       li {
-        width: 400px;
+        width: 100%;
       }
     }
   }
