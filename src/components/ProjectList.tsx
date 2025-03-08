@@ -7,10 +7,18 @@ function ProjectList({ list }) {
     <ProjectListWrapper>
       <a href={list.href} target="_blank" rel="noreferrer">
         <div>
-          <img src={list.src} alt={`${list.title} 홈페이지 이미지`} />
-          <p>see the page</p>
-          <p>{list.title}</p>
-          <BtnIco src={viewBtn} alt={`${list.title} 홈페이지 이동 버튼`} />
+          <img
+            className="thumb"
+            src={list.src}
+            alt={`${list.title} 홈페이지 이미지`}
+          />
+          <div className="explan">
+            <div>
+              <p>see the page</p>
+              <p>{list.title}</p>
+            </div>
+            <img src={viewBtn} alt={`${list.title} 홈페이지 이동 버튼`} />
+          </div>
         </div>
       </a>
     </ProjectListWrapper>
@@ -21,33 +29,45 @@ const ProjectListWrapper = styled.li`
   display: flex;
   align-items: center;
   width: calc(50% - 30px);
-  a {
+
+  > a {
     width: 100%;
-    div {
+    > div {
       position: relative;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       width: 100%;
+      aspect-ratio: 9.5 / 7;
       background-color: #2a2a2a;
-      border-radius: 18px;
-      font-size: 16px;
+      border-radius: 1.125em;
+      filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.5));
+      font-size: 1em;
 
-      img:first-child {
-        height: 14em;
+      .thumb {
+        height: 70%;
+      }
+
+      > .explan {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        img {
+          width: 1.5em;
+        }
       }
 
       p {
-        padding-left: 40px;
-        margin-top: 10px;
         color: #aaa;
         font-family: "Pretendard";
         font-weight: 700;
         font-size: 1.125em;
       }
       p:nth-of-type(2) {
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         font-size: 1.75em;
         color: #fff;
       }
@@ -55,15 +75,14 @@ const ProjectListWrapper = styled.li`
       @media screen and (min-width: 1500px) {
         font-size: 18px;
       }
+
+      @media screen and (max-width: 767px) {
+        li {
+          width: 100%;
+        }
+      }
     }
   }
-`;
-
-const BtnIco = styled.img`
-  position: absolute;
-  right: 40px;
-  width: 1.5625em;
-  bottom: 2em;
 `;
 
 export default ProjectList;

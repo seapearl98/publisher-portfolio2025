@@ -1,6 +1,7 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ProjectList from "./ProjectList";
+import gsap from "gsap";
 
 const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const projectLists = [
@@ -46,10 +47,32 @@ const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
     },
   ];
 
+  const projectTitleUpRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      projectTitleUpRef.current,
+      {
+        opacity: 0,
+        y: -30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: projectTitleUpRef.current,
+          start: "top 75%",
+        },
+        ease: "back.out",
+      }
+    );
+  }, []);
+
   return (
     <ProjectsWrapper ref={ref}>
-      <h3>
-        <i>💻</i> 작업한 프로젝트
+      <h3 ref={projectTitleUpRef}>
+        <i>🖥️</i> 작업한 프로젝트
       </h3>
       <ul>
         {projectLists.map((list, index) => (
@@ -62,56 +85,35 @@ const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
 const ProjectsWrapper = styled.div`
   position: relative;
-  margin-top: 150px;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 200px;
-  background: linear-gradient(
-    to top,
-    #ff8660 0%,
-    #8000ff 90%,
-    #8000fff2 91%,
-    #8000ffb7 93%,
-    #8000ff8f 95%,
-    #5900b876 97%,
-    #5900b83e 98%,
-    rgba(22, 21, 19, 1) 100%
-  );
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      rgba(22, 21, 19, 1) 0%,
-      rgba(22, 21, 19, 0) 100%
-    );
-  }
+  background-color: #fff;
   h3 {
-    padding-top: 100px;
-    font-size: 44px;
-    color: #fff;
+    font-size: 2.75em;
+    color: #2b2b2b;
     text-align: center;
+    font-weight: 700;
   }
 
   > ul {
     width: 85%;
     max-width: 1000px;
-    margin: 200px auto 0;
+    margin: 150px auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 60px;
+    gap: 3.75em;
+  }
 
-    @media screen and (max-width: 533px) {
+  @media screen and (max-width: 956px) {
+    ul {
+      width: 100%;
       flex-direction: column;
       align-items: center;
-      div {
-        width: 100%;
-        height: 300px;
+      font-size: 13px;
+
+      li {
+        width: 400px;
       }
     }
   }

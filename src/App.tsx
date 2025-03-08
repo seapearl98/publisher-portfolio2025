@@ -23,8 +23,7 @@ function App() {
   const goToSection = (sectionRef: React.RefObject<HTMLElement | null>) => {
     if (sectionRef.current) {
       const scrollPosition = sectionRef.current.offsetTop;
-      const targetPosition =
-        scrollPosition < 70 ? scrollPosition : scrollPosition - 200;
+      const targetPosition = scrollPosition;
 
       gsap.to(window, {
         scrollTo: targetPosition,

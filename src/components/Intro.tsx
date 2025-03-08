@@ -19,17 +19,13 @@ const Intro = forwardRef<HTMLDivElement, {}>((props, ref) => {
       upRef01.current,
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1 },
-      "-=0.4"
+      "-=0.6"
     );
-
-    gsap.fromTo(
+    tl.fromTo(
       upRef02.current,
       { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: { trigger: upRef02.current, start: "top 80%" },
-      }
+      { opacity: 1, y: 0, duration: 1 },
+      "-=0.6"
     );
   }, []);
 
@@ -55,8 +51,12 @@ const Intro = forwardRef<HTMLDivElement, {}>((props, ref) => {
 });
 
 const IntroWrapper = styled.div`
-  padding-top: 140px;
   width: 75%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   h2,
   p {
@@ -66,7 +66,7 @@ const IntroWrapper = styled.div`
   }
   h2 {
     margin-top: 62px;
-    font-size: 45px;
+    font-size: 2.8125em;
     font-weight: 700;
     line-height: 1.4;
   }
@@ -75,17 +75,23 @@ const IntroWrapper = styled.div`
     margin: 0 auto;
     margin-top: 61px;
     color: #797979;
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 1.25em;
+    line-height: 1.75;
     em {
       color: #eee;
       font-weight: 700;
     }
   }
+
+  @media screen and (max-width: 956px) {
+    font-size: 13px;
+    width: 85%;
+  }
 `;
+
 const ProfileCircle = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 25em;
+  height: 25em;
   margin: 0 auto;
   border-radius: 50%;
   background: linear-gradient(-30deg, #ff8660 0%, #8000ff 99%);

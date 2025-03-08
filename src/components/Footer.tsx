@@ -5,52 +5,57 @@ function Footer() {
   return (
     <FooterWrapper>
       <div>
-        <p>Thanks for watching my portfolio!</p>
-        <p>작업물이 마음에 드셨다면, 연락주세요!</p>
+        <p>
+          Thanks for watching my portfolio!
+          <br />
+          Please Contact Here
+        </p>
+        <span>↓</span>
+        <address>gown1977@gmail.com</address>
       </div>
-      <address>
-        <i>📬</i>: gown1977@gmail.com
-      </address>
     </FooterWrapper>
   );
 }
 
 const FooterWrapper = styled.footer`
-  padding: 50px 12.5%;
+  padding: 12.5em 7.5% 9.375em;
   color: #f3f3f3;
   font-weight: 700;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 
-  p:nth-of-type(1) {
-    font-size: 44px;
+  p {
+    font-size: 2.75em;
     color: #e3e3e3;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
-  p:nth-of-type(2) {
-    margin-top: 20px;
-    font-size: 32px;
-    line-height: 1.5;
+  span {
+    display: block;
+    margin-top: 30px;
+    font-size: 30px;
+    animation: bounce 1s ease-out infinite;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-20%);
+    }
+    50% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(-20%);
+    }
   }
 
   address {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    white-space: nowrap;
-    i {
-      font-size: 36px;
-    }
+    margin-top: 30px;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
   }
 
-  @media screen and (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    address {
-      margin-top: 35px;
-    }
+  @media screen and (max-width: 956px) {
+    font-size: 13px;
   }
 `;
 
