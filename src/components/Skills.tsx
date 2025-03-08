@@ -119,6 +119,10 @@ const SkillsWrapper = styled.div`
     }
   }
 
+  h3:nth-of-type(2) {
+    margin-top: 400px;
+  }
+
   @media screen and (max-width: 956px) {
     font-size: 13px;
     width: 85%;
@@ -132,7 +136,6 @@ const SkillsUl = styled.ul`
   width: 100%;
   height: 80px;
   margin-top: 50px;
-  margin-bottom: 400px;
   gap: 10px;
 
   &::before,
@@ -187,8 +190,6 @@ const SkillsUl = styled.ul`
   @media screen and (max-width: 956px) {
     font-size: 13px;
     text-align: center;
-  }
-  @media screen and (max-width: 500px) {
   }
 `;
 
