@@ -87,10 +87,11 @@ const ProjectsWrapper = styled.div`
   position: relative;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #fff;
+  /* background-color: #fff; */
   h3 {
     font-size: 2.75em;
-    color: #2b2b2b;
+    /* color: #2b2b2b; */
+    color: #f2f2f2;
     text-align: center;
     font-weight: 700;
   }

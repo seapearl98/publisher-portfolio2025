@@ -19,13 +19,14 @@ function Footer() {
 
 const FooterWrapper = styled.footer`
   padding: 12.5em 7.5% 9.375em;
-  color: #f3f3f3;
+  /* color: #f3f3f3; */
+  background-color: #f3f3f3;
   font-weight: 700;
   text-align: center;
 
   p {
     font-size: 2.75em;
-    color: #e3e3e3;
+    /* color: #e3e3e3; */
     line-height: 1.4;
   }
 
@@ -50,8 +51,8 @@ const FooterWrapper = styled.footer`
 
   address {
     margin-top: 30px;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
+    font-size: 2em;
+    letter-spacing: 0.01em;
   }
 
   @media screen and (max-width: 956px) {
