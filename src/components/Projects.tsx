@@ -41,9 +41,9 @@ const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
       href: "https://chungkiwatown.co.kr/en/",
     },
     {
-      title: "순정한우",
+      title: "미몽",
       src: require(`../assets/images/work8.png`),
-      href: "https://gangtanfnc.com/",
+      href: "https://xn--h62bnw.kr/",
     },
   ];
 
