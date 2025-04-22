@@ -98,6 +98,7 @@ const Wrapper = styled.div`
         align-items: center;
         aspect-ratio: 3 / 2;
         width: 90%;
+        max-width: 400px;
       }
     }
   }
