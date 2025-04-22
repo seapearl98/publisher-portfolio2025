@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import SideProject from "./components/SideProject";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -46,6 +47,7 @@ function App() {
       <Experience />
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
+      <SideProject />
       <Footer />
     </div>
   );

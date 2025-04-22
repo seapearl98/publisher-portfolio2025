@@ -71,9 +71,7 @@ const Projects = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   return (
     <ProjectsWrapper ref={ref}>
-      <h3 ref={projectTitleUpRef}>
-        <i>🖥️</i> 작업한 프로젝트
-      </h3>
+      <h3 ref={projectTitleUpRef}>WORK</h3>
       <ul>
         {projectLists.map((list, index) => (
           <ProjectList key={index} list={list} />

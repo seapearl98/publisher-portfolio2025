@@ -40,17 +40,17 @@ const Intro = forwardRef<HTMLDivElement, {}>((props, ref) => {
         2년차 웹 퍼블리셔 이해주입니다.
       </h2>
       <p ref={upRef02}>
-        웹에이전시에서 1년 6개월 동안 다양한 웹사이트를 구축하며, <br />
+        웹에이전시에서 1년 6개월 동안 다양한 웹사이트를 구축하며,
+        <br />
         <em>
           사용자를 고려한 역동적인 UI와 유지보수를 위한 효율적인 코드 작성
         </em>
         을 고민했습니다.
-        <br /> 작은 부분까지 놓치지 않고 효율성과 인터랙션을 고민하며,{" "}
-        <em>
-          <br />
-          사용자에게 더 나은 경험을 제공하는 웹 퍼블리셔
-        </em>
-        로 성장하겠습니다.
+        <br />
+        작은 부분까지 놓치지 않고 효율성과 인터랙션을 고민하며,
+        <br />
+        <em>사용자에게 더 나은 경험을 제공하는 웹 퍼블리셔</em>로
+        성장하겠습니다.
       </p>
     </IntroWrapper>
   );
@@ -79,7 +79,7 @@ const IntroWrapper = styled.div`
     line-height: 1.4;
   }
   p {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     margin-top: 3.8125em;
     color: #797979;
@@ -94,6 +94,9 @@ const IntroWrapper = styled.div`
   @media screen and (max-width: 956px) {
     font-size: 13px;
     width: 85%;
+    height: auto;
+    padding: 150px 0;
+    justify-content: start;
   }
 `;
 

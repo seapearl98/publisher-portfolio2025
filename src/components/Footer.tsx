@@ -5,11 +5,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <div>
-        <p>
-          Thanks for watching my portfolio!
-          <br />
-          Please Contact Here
-        </p>
+        <p>Contact</p>
         <span>↓</span>
         <address>gown1977@gmail.com</address>
       </div>
@@ -18,7 +14,7 @@ function Footer() {
 }
 
 const FooterWrapper = styled.footer`
-  padding: 12.5em 7.5% 9.375em;
+  padding: 7em 7.5%;
   /* color: #f3f3f3; */
   background-color: #f3f3f3;
   font-weight: 700;

@@ -36,23 +36,16 @@ function Experience() {
 
   return (
     <ExperienceWrapper>
-      <h3 ref={bounceRef01}>
-        <i>💼</i> 경력 및 관련 활동
-      </h3>
+      <h3 ref={bounceRef01}>WORK EXPERIENCE & EDUCATION</h3>
       <ExpUl>
         <li ref={bounceRef02}>
-          <p>
-            <em>주식회사 뷰쓰리</em>에서 <em>1년 6개월</em>간 웹 퍼블리셔로
-            근무했어요.
-          </p>
-          <span>(2023.06 - 2024.11)</span>
+          <p>2023.06 - 2024.11 --- (주)뷰쓰리</p>
         </li>
         <li ref={bounceRef03}>
           <p>
-            이젠아카데미컴퓨터학원에서 <br />
-            <em>UI/UX 웹&앱 디자인 & 프론트엔드(React.js)과정</em>을 수료했어요.
+            <span>2022.07 - 2022.12 ---</span> UI/UX 웹&앱 디자인 &
+            프론트엔드(React.js)과정 수료
           </p>
-          <span>(2022.07 - 2022.12)</span>
         </li>
       </ExpUl>
     </ExperienceWrapper>
@@ -76,7 +69,7 @@ const ExperienceWrapper = styled.div`
   @media screen and (max-width: 956px) {
     font-size: 13px;
     width: 85%;
-    text-align: center;
+    /* text-align: center; */
   }
 `;
 
@@ -87,7 +80,7 @@ const ExpUl = styled.ul`
   margin-top: 50px;
   li {
     font-size: 1.25em;
-    color: #797979;
+    color: #eee;
     line-height: 1.5;
     em {
       font-size: 1.5em;
@@ -100,8 +93,8 @@ const ExpUl = styled.ul`
   }
 
   @media screen and (max-width: 956px) {
-    align-items: center;
-    text-align: center;
+    /* align-items: center; */
+    /* text-align: center; */
   }
 `;
 
