@@ -6,7 +6,7 @@ function ProjectList({ list }) {
   return (
     <ProjectListWrapper>
       <a href={list.href} target="_blank" rel="noreferrer">
-        <div>
+        <div className="default_layer">
           <img
             className="thumb"
             src={list.src}
@@ -20,6 +20,15 @@ function ProjectList({ list }) {
             <img src={viewBtn} alt={`${list.title} 홈페이지 이동 버튼`} />
           </div>
         </div>
+        <HoverLayer>
+          <p className="hover_title">기여도: {list.cont}%</p>
+          {/* <p>주요 작업: 모션 구현, 크로스브라우징 및 유지보수</p> */}
+          <ul>
+            {list.work.map((list, index) => (
+              <li key={index}>{list}</li>
+            ))}
+          </ul>
+        </HoverLayer>
       </a>
     </ProjectListWrapper>
   );
@@ -31,8 +40,9 @@ const ProjectListWrapper = styled.li`
   width: calc(50% - 30px);
 
   > a {
+    position: relative;
     width: 100%;
-    > div {
+    > .default_layer {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -80,6 +90,57 @@ const ProjectListWrapper = styled.li`
         li {
           width: 100%;
         }
+      }
+    }
+  }
+`;
+
+const HoverLayer = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 30px;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  border-radius: 1.125em;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .hover_title {
+    font-size: 36px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 500;
+
+    li {
+      position: relative;
+      padding-left: 16px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 8px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #fff;
       }
     }
   }
