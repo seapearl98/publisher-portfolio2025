@@ -35,7 +35,7 @@ const Intro = forwardRef<HTMLDivElement, {}>((props, ref) => {
         <img src={profile} alt="" />
       </ProfileCircle>
       <h2 ref={upRef01}>
-        안녕하세요.
+        안녕하세요,
         <br />
         2년차 웹 퍼블리셔 이해주입니다.
       </h2>
