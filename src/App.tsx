@@ -47,7 +47,7 @@ function App() {
       <Experience />
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
-      <SideProject />
+      {/* <SideProject /> */}
       <Footer />
     </div>
   );

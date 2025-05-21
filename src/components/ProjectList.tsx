@@ -21,8 +21,7 @@ function ProjectList({ list }) {
           </div>
         </div>
         <HoverLayer>
-          <p className="hover_title">기여도: {list.cont}%</p>
-          {/* <p>주요 작업: 모션 구현, 크로스브라우징 및 유지보수</p> */}
+          <p className="hover_title">퍼블리싱 기여도: {list.cont}%</p>
           <ul>
             {list.work.map((list, index) => (
               <li key={index}>{list}</li>
