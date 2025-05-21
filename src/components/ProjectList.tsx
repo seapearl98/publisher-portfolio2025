@@ -87,7 +87,7 @@ const ProjectListWrapper = styled.li`
 
       @media screen and (max-width: 767px) {
         li {
-          width: 100%;
+          width: 75%;
         }
       }
     }

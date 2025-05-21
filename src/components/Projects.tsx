@@ -159,7 +159,7 @@ const ProjectsWrapper = styled.div`
       font-size: 13px;
 
       li {
-        width: 100%;
+        width: 80%;
       }
     }
   }
